@@ -1,0 +1,73 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MySite</title>
+
+
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-min.css">
+</head>
+<body>
+
+<div class="main" style="width: 100%; color:white; font-weight:bold;">
+    <div class="head">
+        <div class="icons" style="float:right;  margin-right:30px;">
+            <a href="login.php">
+                <img style="background-color:#ffffff; padding-top:10px; margin-top:10px;" src="images/icons/icon-exit.png"></a></div>
+        <div style="float:right; margin-top:20px;"><span th:utext="${userName1}" ></span></div>
+        <div class="icons"><a href="/"><img src="images/icons/icon-home1.png"></a></div>
+
+    </div>
+
+    <div class="wmessage">
+
+        <form action="#" th:action="@{/editUser}" th:object = "${user}" method="POST">
+            <label th:for="card">Card:</label><br>
+            <input th:field = "*{card}"  placeholder="Поштасын енгіз" value="${user.card}"/>*Не трогать!
+            <br>
+            <label th:for="surname">First Name:</label><br>
+            <input  th:field = "*{surname}"  placeholder="Есімін енгіз" value="${user.surname}" />
+            <br>
+            <label th:for="name">Last Name:</label><br>
+            <input  th:field = "*{name}"  placeholder="Тегін енгіз" value="${user.name}" />
+            <br>
+            <label th:for="inst">inst:</label><br>
+            <select  th:field = "*{inst}">
+                <option th:each="institut : ${instituts}"
+                        th:text="${institut.name}"
+                        th:value="${institut.name}">
+
+                </option>
+
+            </select>
+            <br>
+            <select  th:field = "*{caf}">
+                <option th:each="cafedra : ${cafedras}"
+                        th:text="${cafedra.name}"
+                        th:value="${cafedra.name}">
+
+                </option>
+
+            </select><br>
+            <label th:for="login">Login</label><br>
+            <input  th:field = "*{login}"  placeholder="Тегін енгіз" value="${user.login}" />
+            <br>
+            <label th:for="password">Password:</label><br>
+            <input th:field = "*{password}"  placeholder="Тегін енгіз" value="${user.password}" />
+            <br>
+
+
+            <button type="submit" class="btn btn-primary">Сақтау</button>
+
+        </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>

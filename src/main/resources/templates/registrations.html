@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MySite</title>
+
+
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-min.css">
+</head>
+<body>
+
+<div class="main" style="width: 100%; color:white; font-weight:bold;">
+    <div class="head">
+        <div class="icons" style="float:right;  margin-right:30px;">
+            <a href="login.php">
+                <img style="background-color:#ffffff; padding-top:10px;" src="images/icons/icon-exit.png"></a></div>
+        <div style="float:right; margin-top:20px;">Surname Name</div>
+        <div class="icons"><a href="/"><img src="images/icons/icon-home1.png"></a></div>
+
+    </div>
+    <p th:text="${registration1}"></p>
+    <div class="wmessage">
+        <form action="#" th:action="@{/registrations}" th:object="${registration}" method="POST" >
+            <label th:for="card">Карта: </label>
+            <input   th:disabled="true" th:value = "${registration1}"  class="form-control" />
+            <span th:errors="*{card}" class="text-danger"></span>
+            <label th:for="surname">Фамилия: </label>
+            <input th:field="*{surname}" class="form-control" placeholder="Фамилия"/>
+            <span th:errors="*{surname}" class="text-danger"></span>
+            Имя: <label th:for="name"></label>
+            <input th:field="*{name}" class="form-control" placeholder="Имя"/>
+            <span th:errors="*{name}" class="text-danger"></span>
+            Кафедра: <label th:for="cafedra"></label>
+            <input th:field="*{cafedra}" class="form-control" placeholder="Кафедра"/>
+            <span th:errors="*{cafedra}" class="text-danger"></span>
+            Институт:    <label th:for="institut"></label>
+            <input th:field="*{institut}" class="form-control" placeholder="Институт"/>
+            <span th:errors="*{institut}" class="text-danger"></span>
+            Логин:    <label th:for="login"></label>
+            <input th:field="*{login}" class="form-control" placeholder="Логин"/>
+            <span th:errors="*{login}" class="text-danger"></span>
+            Пароль:    <label th:for="password"></label>
+            <input th:field="*{password}" class="form-control" placeholder="Пароль"/>
+            <span th:errors="*{password}" class="text-danger"></span>
+            Статус:    <label th:for="status"></label>
+            <input th:field="*{status}" class="form-control" placeholder="Статус"/>
+            <span th:errors="*{status}" class="text-danger"></span>
+
+
+            <br/>
+            <button type="submit" class="btn btn-primary">Зарезервировать</button>
+
+        </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>

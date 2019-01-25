@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MySite</title>
+
+
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-min.css">-->
+</head>
+<body>
+
+<div class="main" style="width: 100%; color:white; font-weight:bold;">
+    <div class="head">
+        <div class="icons" style="float:right;  margin-right:30px;">
+            <a href="login.php">
+                <img style="background-color:#ffffff; padding-top:10px; margin-top:10px;" src="images/icons/icon-exit.png"></a></div>
+        <div style="color: #ffffff; float:right; margin-top:20px;"><span th:utext="${userName1}"></span></div>
+        <div class="icons"><a href="/"><img src="images/icons/icon-home1.png"></a></div>
+
+
+
+    </div>
+    <div class="mess" style="background-color: #efa2a9; border: 5px double white;  height: 70px; margin-top: 10px; margin-left: 10px; margin-right: 10px;" th:each="user : ${users}" th:unless="${ #lists.isEmpty(user.surname)}">Вставтье карту в считыватель! Вставтье  карту только типа Mifare!</div>
+    <div class="wmessage">
+    <tbody>
+    <tr th:each="user : ${users}" th:if="${ #lists.isEmpty(user.surname)}">
+        <td th:text="${user.card  }"></td>
+        <td th:text="${user.surname  }"></td>
+        <td th:text="${user.name  }"></td>
+        <td>
+        </td>
+        <td style="float: right;"> <a th:href="@{'/editUser?id='+${user.id_user}}">Edit</a></td>
+        <td> <a th:href = "@{'/delete?id='+${user.id_user}}">delete</a> </td>
+    </tr><hr>
+    </tbody>
+    </div>
+</div>
+
+
+<meta http-equiv="refresh" content="10">
+</body>
+</html>

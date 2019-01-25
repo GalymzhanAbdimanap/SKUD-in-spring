@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>MySite</title>
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+   <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-min.css">-->
+</head>
+<body>
+
+<div class="main" style="width: 100%; color:white; font-weight:bold;">
+    <div class="head">
+        <div class="icons" style="float:right;  margin-right:30px;">
+            <a href="login.php">
+                <img style="background-color:#ffffff; padding-top:10px; margin-top:10px;"  src="images/icons/icon-exit.png"></a></div>
+        <div style="color: #ffffff; float:right; margin-top:20px;"><span style="color: #ffffff" th:utext="${userName1}" ></span></div>
+        <div class="icons"><a href="/"><img src="images/icons/icon-home1.png"></a></div>
+
+    </div>
+</div>
+<div class="table">
+    <div class="columb">
+        <b style="margin-right:30px;">№</b>
+        <b style="margin-right:30px;">Аудитория</b>
+        <b style="margin-right:30px;">Начало</b>
+        <b style="margin-right:30px;">Конец</b>
+    </div>
+
+    <div class="column">
+        <b style="margin-right:35px;">$i        </b>
+        <b style="margin-right:77px;">$row1['auditorya']</b>
+        <b style="margin-right:50px;">$row1['time_start']</b>
+        <b style="margin-right:30px;">$row1['time_end']</b>
+    </div><hr>
+
+
+</div>
+
+
+</body>
+</html>

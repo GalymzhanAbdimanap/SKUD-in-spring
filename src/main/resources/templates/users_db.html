@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+
+
+    <title>MySite</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+   <!-- <link rel="stylesheet" href="/bootstrap.min.css" media="screen"/>-->
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    </head>
+<body>
+
+<div class="main" style="width: 100%; font-weight:bold;">
+    <div class="head" style=" color:white;">
+        <div class="icons" style="float:right;  margin-right:30px;">
+            <a href="login.php">
+                <img style="background-color:#ffffff; padding-top:10px; margin-top:10px;" src="images/icons/icon-exit.png"></a>
+        </div>
+        <div style="float:right; margin-top:20px;"><span th:utext="${userName1}" ></span></div>
+        <div class="icons"><a href="/"><img src="images/icons/icon-home1.png"></a></div>
+
+    </div>
+    <div class="search" style="background-color: #E9EBEE">
+
+        <select name="institut" id="institut" >
+            <option value=''></option>
+
+        </select>
+        <select name="cafedra" id="cafedra" style="margin-left:50px; width:250px; border-radius:10px; height:35px;">
+
+            <option value=''></option>
+
+        </select>
+        <select name="teacher" id="teacher" style="margin-left:50px; width:250px; border-radius:10px; height:35px;">
+            <option value=''></option>
+
+        </select>
+        </p>
+
+
+
+        <button id="search2" >Найти</button>
+    </div>
+
+
+<div class="table"  style="color: #0f0f0f">
+    <div class="columb">
+        <b style="margin-left:0px;">№</b>
+        <b style="margin-left:30px;">Фамилия</b>
+        <b style="margin-left:100px;">Имя</b>
+        <b style="margin-left:110px;">Институт</b>
+        <b style="margin-left:110px;">Кафедра</b>
+        <b	 style="margin-left:110px;">Логин</b>
+        <b	 style="margin-left:110px;">Пароль</b>
+        <hr>
+
+
+    </div>
+
+    <tbody>
+
+    <tr th:each="user : ${users}" th:if="${not #lists.isEmpty(user.surname)}">
+        <td  th:text="${user.surname  }"></td>
+        <td th:text="${user.name  }"></td>
+        <td>
+        </td>
+        <td style="float: right;"> <a th:href="@{'/editUser?id='+${user.id_user}}">Edit</a></td>
+        <td> <a th:href = "@{'/delete?id='+${user.id_user}}">delete</a> </td>
+    </tr><hr>
+    </tbody>
+</div>
+<!--
+    <tr th:each="user : ${users}" th:if="${user.inst} eq 'IGiND'">
+        <td  th:text="${user.surname  }"></td>
+        <td th:text="${user.name  }"></td>
+        <td>
+        </td>
+        <td style="float: right;"> <a th:href="@{'/editUser?id='+${user.id}}">Edit</a></td>
+        <td> <a th:href = "@{'/delete?id='+${user.id}}">delete</a> </td>
+    </tr><hr>
+    </tbody>-->
+
+
+
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

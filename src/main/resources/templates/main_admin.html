@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MySite</title>
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-min.css">
+</head>
+<body>
+
+<div class="main" style="width: 100%; color:white; font-weight:bold;">
+    <div class="head">
+        <div class="icons" style="float:right;  margin-right:30px;">
+            <a href="/login">
+                <img style="background-color:#ffffff; padding-top:10px; margin-top:10px;" src="images/icons/icon-exit.png"></a></div>
+        <div style="float:right; margin-top:20px; color:#ffffff"  ><span style="color: #ffffff" th:utext="${userName1}" ></span></div>
+        <div class="icons"><a href="/"><img src="images/icons/icon-home1.png"></a></div>
+
+    </div>
+</div>
+
+<a href="/history_admin"><div class="profile">
+    <img src="images/icons/icon-history.png">
+    <a>История</a>
+</div></a>
+
+<a href="/control"><div class="profile">
+    <img src="images/icons/icon-cabinets.png">
+    <a>Управление</a>
+</div></a>
+
+
+<a href="/Korzina"><div class="profile">
+    <img src="images/icons/icon-letter.png">
+    <a>Регистрация</a>
+</div></a>
+
+
+<a href="/find_db"><div class="profile">
+    <img src="images/icons/icon-letter.png">
+    <a>Поиск по истории БД</a>
+</div></a>
+
+<a href="/users_db"><div class="profile">
+    <img src="images/icons/icon-letter.png">
+    <a>Изменить по БД</a>
+</div></a>
+
+
+
+<a href="/add_lessons"><div class="profile">
+    <img src="images/icons/icon-letter.png">
+    <a>Включить СКУД</a>
+</div></a>
+
+
+
+
+
+</body>
+</html>

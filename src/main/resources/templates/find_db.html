@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+
+
+    <title>MySite</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+   <!-- <link rel="stylesheet" href="/bootstrap.min.css" media="screen"/>-->
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+   <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-min.css">-->
+</head>
+<body>
+
+<div class="main" style="width: 100%; color:white; font-weight:bold;">
+    <div class="head">
+        <div class="icons" style="float:right;  margin-right:30px;">
+            <a href="login.php">
+                <img style="background-color:#ffffff; padding-top:10px; margin-top:10px;" src="images/icons/icon-exit.png"></a></div>
+        <div style="float:right; margin-top:20px; color: #ffffff;"><span th:utext="${userName1}" ></span></div>
+        <div class="icons"><a href="/"><img src="images/icons/icon-home1.png"></a></div>
+
+    </div>
+    <div class="search">
+
+        <select name="institut" id="institut" >
+            <option th:each="institut : ${instituts}"
+                    th:text="${institut.name}"
+                    th:value="${institut.name}"
+            ></option>
+
+        </select>
+        <select name="cafedra" id="cafedra" style="margin-left:50px; width:250px; border-radius:10px; height:35px;">
+
+            <option th:each="cafedra : ${cafedras}"
+                    th:text="${cafedra.name}"
+                    th:value="${cafedra.name}"></option>
+
+        </select>
+        <select name="teacher" id="teacher" style="margin-left:50px; width:250px; border-radius:10px; height:35px;">
+            <option th:each="user : ${users}" th:if="${not #lists.isEmpty(user.surname)}"
+                    th:text="${user.surname}"
+                    th:value="${user.name}"
+
+
+            ></option>
+
+        </select>
+        </p>
+
+
+        <!--<a th:href="@{'/find_db?card='+${user.card}}">Edit</a>-->
+        <button id="search2" >Найти</button>
+    </div>
+
+</div>
+<div class="table">
+    <div class="columb">
+        <b style="margin-left:0px;">№</b>
+        <b style="margin-left:30px;">Фамилия</b>
+        <b style="margin-left:100px;">Имя</b>
+        <b style="margin-left:110px;">Институт</b>
+        <b style="margin-left:110px;">Кафедра</b>
+        <b	 style="margin-left:110px;">Логин</b>
+        <b	 style="margin-left:110px;">Пароль</b>
+        <hr>
+
+
+    </div>
+
+
+    <tr th:each="user : ${users}">
+        <td  th:text="${user.name}"></td>
+        <td th:text="${user.surname}"></td>
+        <td>
+            <span  th:each="us : ${user.timestamps}" th:if="${user.card} eq ${us.card}" >
+                <span  th:text="${us.time_in}"></span><br>
+
+            </span>
+        </td>
+        <br><br>
+    </tr>
+
+
+
+
+
+    <br><br>
+
+
+
+    </tr><hr>
+    </tbody>
+
+
+
+</div>
+
+
+
+</body>
+</html>

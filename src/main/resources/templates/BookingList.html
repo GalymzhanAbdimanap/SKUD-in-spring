@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Booking List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+   <!-- <link rel="stylesheet" href="/bootstrap.min.css" media="screen"/>-->
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-min.css">-->
+</head>
+<div class="main" style="width: 100%; color:white; font-weight:bold;">
+    <div class="head">
+        <div class="icons" style="float:right;  margin-right:30px;">
+            <a href="login.php">
+                <img style="background-color:#ffffff; padding-top:10px;" src="images/icons/icon-exit.png"></a></div>
+        <div style="float:right; margin-top:20px;">Surname Name</div>
+        <div class="icons"><a href="/"><img src="images/icons/icon-home1.png"></a></div>
+
+    </div>
+    <div class="search">
+
+        <select name="institut" id="institut" >
+            <option value=''></option>
+
+        </select>
+        <select name="cafedra" id="cafedra" style="margin-left:50px; width:250px; border-radius:10px; height:35px;">
+
+            <option value=''></option>
+
+        </select>
+        <select name="teacher" id="teacher" style="margin-left:50px; width:250px; border-radius:10px; height:35px;">
+            <option value=''></option>
+
+        </select>
+        </p>
+
+
+
+        <button id="search2" >Найти</button>
+    </div>
+
+</div>
+<div class="table">
+    <div class="columb">
+        <b style="margin-left:0px;">№</b>
+        <b style="margin-left:60px;">Фамилия</b>
+        <b style="margin-left:100px;">Имя</b>
+        <b style="margin-left:100px;">Институт</b>
+        <b style="margin-left:110px;">Кафедра</b>
+        <b style="margin-left:110px;">Логин</b>
+        <b style="margin-left:110px;">Пароль</b>
+        <b style="margin-left:110px;">Статус</b>
+        <hr>
+
+
+    </div>
+
+    <div id="column2">
+        <div >
+            <div th:each="registration : ${registrations}">
+                <b style='margin-left:0px; '>                 </b>
+                <span  value=' '></span>
+                <span style='margin-left:80px; width:90px;' th:text="${registration.surname}" ></span>
+                <span style='margin-left:90px; width:90px;' th:text="${registration.name}"      >  </span>
+                <span style='margin-left:120px; width:90px;' th:text="${registration.institut}" >  </span>
+                <span style='margin-left:120px; width:90px;' th:text="${registration.cafedra}" >  </span>
+                <span style='margin-left:120px; width:90px;' th:text="${registration.login}" >    </span>
+                <span style='margin-left:120px; width:90px;' th:text="${registration.password}" >  </span>
+                <span style='margin-left:120px; width:90px;' th:text="${registration.status}" >  </span>
+                <a href=''>Изменить  </a>
+                <a th:href = "@{'/drop?id='+${registration.id}}">Удалить</a>
+        </div>
+    </div><hr>
+</div><hr>
+
+
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+html {
+	background-color: #E9EBEE;
+}
+span{
+	color: red;
+}
+
+.main {
+	margin: 0 auto;
+	width: 1000px;
+	color:white; 
+	font-weight:bold;
+	background-color: #E9EBEE;
+}
+#logo{
+	margin-top:100px;
+	margin-left:455px;
+}
+.icons{
+	margin-left:30px;	
+}
+
+#institut{
+	height:35px;	
+	width:250px;
+	border-radius:10px;
+}
+#cafedra{
+	height:35px;	
+	width:250px;
+	border-radius:10px;
+}
+#teacher{
+	height:35px;	
+	width:250px;
+	border-radius:10px;
+}
+.icons img{
+	 
+	padding-top:10px;
+	
+}
+
+.head{
+	height:100px;
+	width:100%;
+	background-color: #305075;
+}
+
+.header{
+	height:100px;
+	width:100%;
+	background-color: #305075;
+}
+
+.header input {
+	margin-left: 200px;
+	height:35px;
+	width:250px;
+	background-color:#305075;
+	border: 1px solid #305075;
+	border-radius:10px;
+	font-size:14px;
+}
+
+.body {
+	background-color: #E9EBEE; /**/
+	
+}
+
+.enter {
+	text-align: center;
+	background-color: #E9EBEE;
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 350px;
+	height: 400px;
+	padding: 20px;
+	border-radius:6px;
+}
+
+.enter input {
+	margin-top: 10px;
+	padding: 5px;
+	width: 300px;
+	font-size: 16px;
+	border-radius:6px;
+}
+
+.register {
+	text-align: left;
+	background-color: #E9EBEE;
+	height: 400px;
+	width: 500px;
+	margin-left: 250px;
+	margin-top: 20px;
+}
+.register input {
+	margin-top: 10px;
+	padding: 10px;
+	width: 300px;
+	font-size: 16px;
+}
+.register i{
+	font-size: 42px;
+}
+
+.mainw{
+	
+	
+	width: 1600px;
+	margin: 0 auto;
+}
+.profile {
+	float: left;
+	background-color: #E9EBEE;
+	margin-top: 50px;
+	margin-left:50px;
+	width: 50px;
+	height: 70px;
+	padding: 20px;
+}
+.mess{
+	background-color: #efa2a9;
+	height: 50px;
+}
+.profile img{
+	padding-left:37px;
+	padding-top:10px;
+}
+.profile a{
+	color:#305075;
+	padding-left:15px;
+	font-size:24px;
+	font-weight:bold;
+}
+.table {
+	
+	
+	background-color:#E9EBEE;
+	margin-left:50px;
+	margin-top:50px;
+}
+.search{
+	margin-left:50px;
+	margin-top:50px;
+	color:black;
+	background-color: #E9EBEE;
+
+}
+.wmessage{
+	float: left;
+	margin-top:50px;
+	margin-left: 5px;
+	background-color: #E9EBEE;
+	width: 700px;
+	height: 600px;
+	color:#000000;
+}
+.wmessage input {
+	margin-top: 10px;
+	padding: 10px;
+	width: 400px;
+	font-size: 16px;
+	border-radius:6px;
+}
+
+/*= Buttons--------------------------------------------------------*/
+
+.enter button {
+	padding: 5px;
+	margin-top: 35px;
+	width: 326px;
+	background-color: #0000FF;
+	border-radius: 6px;
+	color: #ffffff;
+	font-size: 16px;
+}
+
+.register button {
+	padding: 5px;
+	margin-top: 35px;
+	width: 326px;
+	background-color: #0000FF;
+	border-radius: 6px;
+	color: #ffffff;
+	font-size: 16px;
+}
+
+.wmessage button {
+	padding: 5px;
+	margin-top: 35px;
+	width: 326px;
+	background-color: #0000FF;
+	border-radius: 6px;
+	color: #ffffff;
+	font-size: 16px;
+}
+
+
+.profile button {
+	padding: 5px;
+	margin-top: 35px;
+	width: 326px;
+	background-color: #0000FF;
+	border-radius: 6px;
+	color: #ffffff;
+	font-size: 16px;
+}
+
+
+
+/*= Links--------------------------------------------------------*/
+
+.enter a:link, a:visited {
+	margin-top: 10px;
+	color: #A9A9A9;
+    text-decoration: none;
+}
+
+.enter a:hover {
+	color: #A9A9A9;
+	text-decoration: underline;
+}
